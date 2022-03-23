@@ -1,0 +1,22 @@
+{
+    "name": "minhtc-react-native",
+    "displayName": "minhtc-react-native",
+    "description": "This is an awesome snippet to help you code react-native faster",
+    "version": "0.0.1",
+    "publisher": "Tran Cao Minh",
+    "icon": "./logo.jpg",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
