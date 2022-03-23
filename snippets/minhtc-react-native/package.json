@@ -4,7 +4,11 @@
     "description": "This is an awesome snippet to help you code react-native faster",
     "version": "0.0.1",
     "publisher": "Tran Cao Minh",
-    "icon": "./logo.jpg",
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "icon": "logo.jpg",
     "engines": {
         "vscode": "^1.65.0"
     },
