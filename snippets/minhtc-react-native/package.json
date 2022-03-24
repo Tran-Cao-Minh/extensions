@@ -1,26 +1,29 @@
 {
-    "name": "minhtc-react-native",
-    "displayName": "minhtc-react-native",
-    "description": "This is an awesome snippet to help you code react-native faster",
-    "version": "0.0.1",
-    "publisher": "Tran Cao Minh",
-    "repository": {
-      "type": "git",
-      "url": ""
-    },
-    "icon": "logo.jpg",
-    "engines": {
-        "vscode": "^1.65.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/snippets.code-snippets"
-            }
-        ]
-    }
+  "name": "minhtc-react-native",
+  "displayName": "minhtc-react-native",
+  "description": "This is an awesome snippet to help you code react-native faster",
+  "version": "0.0.1",
+  "publisher": "Tran Cao Minh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tran-Cao-Minh/extensions/tree/main/snippets/minhtc-react-native"
+  },
+  "icon": "logo.jpg",
+  "engines": {
+    "vscode": "^1.65.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [{
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
 }

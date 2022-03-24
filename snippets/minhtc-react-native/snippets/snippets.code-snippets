@@ -1,39 +1,183 @@
 {
-  "flexbox": { // snipet name
-    "prefix": "flexcenter", // active code in body
-    "body": [ // appear when tab
-      "display:flex;",
-      "align-items:center;",
-      "justify-content:center;"
-    ],
-    "description": "this snippet to help you center a box"
+  // create ELEMENTS with styles
+  "Create a View STYLE element": {
+    "prefix": "view",
+    "body": ["<View style={styles(colors).$1}>", "\t$2", "</View>"],
+    "description": "Create a View  STYLE element."
   },
-  "overflowX": {
-    "prefix": "xauto",
+  "Create a Text STYLE element": {
+    "prefix": "text",
+    "body": ["<Text style={styles(colors).$1}>", "\t$2", "</Text>"],
+    "description": "Create a Text  STYLE element."
+  },
+  "Create a TouchableOpacity element": {
+    "prefix": "touch",
     "body": [
-      "overflow-x:auto;",
-
+      "<TouchableOpacity",
+      "\tstyle={styles(colors).$1}",
+      "\tonPress={() => {",
+      "\t\t$2;",
+      "\t}}",
+      ">", 
+      "\t$3",
+      "</TouchableOpacity>"
     ],
-    "description": "this snippet to make overflow-x = auto"
+    "description": "Create a TouchableOpacity element."
   },
-  "overflowY": {
-    "prefix": "yauto",
+  "Create a Image SOURCE element": {
+    "prefix": "image-s",
     "body": [
-      "overflow-y:auto;",
-
+      "<Image",
+      "\tstyle={styles(colors).$1}",
+      "\tsource={require('$2')}",
+      "/>",
     ],
-    "description": "this snippet to make overflow-y = auto"
+    "description": "Create a Image element."
   },
-  "textoverflow": {
-    "prefix": "text-truncate",
+  "Create a Image URI element": {
+    "prefix": "image-u",
     "body": [
-      "overflow:hidden;",
-      "text-overflow: ellipsis;",
-      "-webkit-line-clamp: 3;",
-      "display: -webkit-box;",
-      "-webkit-box-orient: vertical;",
-
+      "<Image",
+      "\tstyle={styles(colors).$1}",
+      "\tsource={{uri: $2}",
+      "/>",
     ],
-    "description": "this snippet to help the text overflow multiple lines with three dots..."
+    "description": "Create a Image element."
   },
+  // end create ELEMENTS with styles
+
+  "Create a style attribute": {
+    "prefix": "stl",
+    "body": ["style={styles(colors).$1}"],
+    "description": "Creates a style attribute"
+  },
+
+  // "Create icon": {
+  //   "prefix": "icon",
+  //   "body": ["<Icon name=\"$1\" size={25}/>"],
+  //   "description": "Create an icon"
+  // },
+  // "Get all colors": {
+  //   "prefix": "clr",
+  //   "body": ["'#f0b323' '#7c878e' '#131e29' '#0f171f'"],
+  //   "description": "Get all colors to pick"
+  // },
+  // "Input": {
+  //   "prefix": "input",
+  //   "body": ["<Input placeholder=\"$1\"/>"]
+  // },
+  // "Bred": {
+  //   "prefix": "bred",
+  //   "body": ["borderWidth: 1,", "borderColor: \"red\","]
+  // },
+  // "From React Native": {
+  //   "prefix": "frn",
+  //   "body": "import { $1 } from 'react-native'"
+  // },
+  // "From Global Components": {
+  //   "prefix": "fgc",
+  //   "body": "import { $1 } from 'am.golf/native/global_components'"
+  // },
+  // "ssc": {
+  //   "prefix": "ssc",
+  //   "body": ["import { StyleSheet } from 'react-native';", "", "export default StyleSheet.create({", "\t$1", "});"]
+  // },
+  // "_cll": {
+  //   "prefix": "_cll",
+  //   "body": "console.log('$1', $2);"
+  // },
+  // "tss": {
+  //   "prefix": "tss",
+  //   "body": "this.setState({ $1 });"
+  // },
+  // "fim": {
+  //   "prefix": "fim",
+  //   "body": "import $1 from 'am.golf/native/assets/images/$2.png'"
+  // },
+  // "la": {
+  //   "prefix": "la",
+  //   "body": "LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);"
+  // },
+  // "ffm": {
+  //   "prefix": "ffm",
+  //   "body": "fontFamily: 'MuliExtraBold',"
+  // },
+  // "util": {
+  //   "prefix": "util",
+  //   "body": "import * as util from 'ally/service/util';"
+  // },
+  // "cls": {
+  //   "prefix": "cls",
+  //   "body": [
+  //     "import React from \"react\";",
+  //     "",
+  //     "export class $1 extends React.Component<any> {",
+  //     "\trender() {",
+  //     "\t\treturn (",
+  //     "\t\t\t<View style={styles.$2}>",
+  //     "\t\t\t\t$3",
+  //     "\t\t\t</View>",
+  //     "\t\t);",
+  //     "\t}",
+  //     "}"
+  //   ]
+  // },
+  // fast BACKGROUND COLOR React native
+  "Background Blue": {
+    "prefix": "bgc1",
+    "body": "backgroundColor: '#007bff33',",
+    "description": "Background Blue"
+  },
+  "Background Purple": {
+    "prefix": "bgc2",
+    "body": "backgroundColor: '#6f42c133',",
+    "description": "Background Purple"
+  },
+  "Background Pink": {
+    "prefix": "bgc3",
+    "body": "backgroundColor: '#e83e8c33',",
+    "description": "Background Pink"
+  },
+  "Background Red": {
+    "prefix": "bgc4",
+    "body": "backgroundColor: '#dc354533',",
+    "description": "Background Red"
+  },
+  "Background Orange": {
+    "prefix": "bgc5",
+    "body": "backgroundColor: '#fd7e1433',",
+    "description": "Background Orange"
+  },
+  // end fast BACKGROUND COLOR React native
+
+  // fast STYLE React native
+  "Justify Content Center": {
+    "prefix": "jcc",
+    "body": "justifyContent: 'center',"
+  },
+  "Justify Content Space": {
+    "prefix": "jcs",
+    "body": "justifyContent: 'space-$1',"
+  },
+  "Align Items Center": {
+    "prefix": "aic",
+    "body": "alignItems: 'center',"
+  },
+  "Flex Direction Row": {
+    "prefix": "fdr",
+    "body": "flexDirection: 'row',"
+  },
+  "Width full": {
+    "prefix": "wf",
+    "body": "width: '100%',"
+  },
+  "Height full": {
+    "prefix": "hf",
+    "body": "height: '100%',"
+  },
+  "Widht and Height": {
+    "prefix": "wh",
+    "body": ["width: getPerfectUnit($1),", "height: getPerfectUnit($2),"]
+  }
+  // end fast STYLE React native
 }
